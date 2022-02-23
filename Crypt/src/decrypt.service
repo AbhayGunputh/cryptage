@@ -1,0 +1,8 @@
+[Unit]
+Description=Data decryption
+After=network-online.target
+[Service]
+Type-simple
+ExecStart=/home/client/Desktop/Fernet/src/decrypt.sh
+[Install]
+WantedBy=multi-user.target

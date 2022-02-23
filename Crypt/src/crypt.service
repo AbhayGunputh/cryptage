@@ -1,0 +1,8 @@
+[Unit]
+Description=Data encryption
+After=network-online.target
+[Service]
+Type-simple
+ExecStart=/home/client/Desktop/Fernet/src/crypt.sh
+[Install]
+WantedBy=multi-user.target

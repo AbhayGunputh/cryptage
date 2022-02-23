@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#check if the file crypt already exists in the home of the user
+if [[ -d ~/cryptage ]];
+then
+	echo"The folder already exists"
+else
+	mkdir cryptage
+fi
+
+#check if the user has already clone the document
+cd ~/cryptage
+if [[ -d ~/cyptage/cryptage ]];
+then
+	echo "The folder is already cloned"
+else
+	git clone https://github.com/AbhayGunputh/cryptage.git
+fi
+
+
+#To launch the cryption and decryption
+sudo cp -f ~/cryptage/cryptage/src/
