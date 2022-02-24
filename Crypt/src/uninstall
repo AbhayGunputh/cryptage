@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#deleting the folder
+if [[ -d ~/cryptage ]]
+then
+        sudo rm -r ~/cryptage
+else
+        echo "Already uninstalled"
+fi
+
+#deleting the services
+sudo rm -f /etc/systemd/system/crypt.service
+
+sudo rm -f /etc/systemd/system/decrypt.service
