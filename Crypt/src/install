@@ -1,22 +1,43 @@
 #!/bin/bash
-
-#check if the file crypt already exists in the home of the user
-if [[ -d ~/cryptage ]];
+if [[ -d ~/Abhay ]]
 then
-	echo"The folder already exists"
+	echo "The folder already exists"
 else
-	mkdir cryptage
+	mkdir ~/Abhay
 fi
 
-#check if the user has already clone the document
-cd ~/cryptage
-if [[ -d ~/cyptage/cryptage ]];
+cd ~/Abhay
+if [[ -d ~/Abhay/cryptage ]];
 then
 	echo "The folder is already cloned"
 else
 	git clone https://github.com/AbhayGunputh/cryptage.git
 fi
 
+cd ~/Abhay/cryptage/Crypt/src/
+sudo chmod u+x crypt.sh
+sudo chmod u+x decrypt.sh
 
 #To launch the cryption and decryption
-sudo cp -f ~/cryptage/cryptage/src/
+sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.sh ~/Abhay/crypt.sh
+sudo chmod u+x crypt.sh
+sudo ./crypt.sh
+
+sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.sh ~/Abhay/decrypt.sh
+sudo chmod u+x decrypt.sh
+sudo ./decrypt
+
+#copy the service to systemd
+sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.service /etc/systemd/system/crypt.service
+sudo chmod u+x /etc/systemd/system/crypt.service
+sudo cp -f ~/Abhay/cryptage/Crypt/src/decrypt.service /etc/systemd/system/decrypt.service
+sudo chmod u+x /etc/systemd/system/decrypt.service
+
+sudo systemctl daemon-reload
+sudo systemctl enable crypt.service
+sudo systemctl start crypt.service
+sudo systemctl daemon-reload
+sudo systemctl enable decrypt.service
+sudo systemctl start decrypt.service
+
+echo "Installation Completed!"
