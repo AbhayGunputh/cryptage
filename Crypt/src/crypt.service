@@ -3,8 +3,8 @@ Description=B
 After=network.target
 [Service]
 User=client
-WorkingDirectory=/home/Abhay/cryptage/Crypt/src/
-ExecStart=/home/Abhay/cryptage/Crypt/src/crypt.sh start
+WorkingDirectory=/home/User/Abhay/cryptage/Crypt/src/
+ExecStart=/home/Abhay/User/cryptage/Crypt/src/crypt.sh start
 
 [Install]
 WantedBy=multi-user.target
