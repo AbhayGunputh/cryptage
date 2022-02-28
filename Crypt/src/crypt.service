@@ -4,8 +4,8 @@ After=network-online.target
 
 [Service]
 User=client
-WorkingDirectory=/home/$User/Abhay/cryptage/Crypt/src
-ExecStart=/home/client/Abhay/cryptage/Crypt/src/crypt.sh start
+WorkingDirectory=~/Abhay/cryptage/
+ExecStart=~/Abhay/cryptage/crypt.sh start
 
 [Install]
 WantedBy=multi-user.target
