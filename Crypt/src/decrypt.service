@@ -1,8 +1,8 @@
 [Unit]
-Description=A
+Description=Decrypt data
 After=network.target
+
 [Service]
-User=client
 WorkingDirectory=/home/client/Abhay/cryptage/Crypt/src/
 ExecStart=/home/client/Abhay/cryptage/Crypt/src/decrypt.sh start
 

@@ -1,8 +1,8 @@
 [[Unit]
-Description=B
+Description=Encrypt data
 After=network.target
+
 [Service]
-User=client
 WorkingDirectory=/home/client/Abhay/cryptage/Crypt/src/
 ExecStart=/home/client/Abhay/cryptage/Crypt/src/crypt.sh start
 
