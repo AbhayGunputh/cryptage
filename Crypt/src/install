@@ -1,34 +1,34 @@
 #!/bin/bash
-if [[ -d ~/Abhay ]]
+if [[ -d /home/Abhay ]]
 then
 	echo "The folder already exists"
 else
-	mkdir ~/Abhay
+	mkdir /home/Abhay
 fi
 
 cd ~/Abhay
-if [[ -d ~/Abhay/cryptage ]];
+if [[ -d /home/Abhay/cryptage ]];
 then
 	echo "The folder is already cloned"
 else
 	git clone https://github.com/AbhayGunputh/cryptage.git
 fi
 
-cd ~/Abhay/cryptage/Crypt/src/
+cd /home/Abhay/cryptage/Crypt/src/
 #sudo chmod u+x crypt.sh
 #sudo ./crypt.sh
 #sudo chmod u+x decrypt.sh
 #sudo ./decrypt.sh
 
 #To give permission and launch the cryption and decryption
-sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.sh ~/Abhay/crypt.sh
+sudo cp -f /home/Abhay/cryptage/Crypt/src/crypt.sh /home/Abhay/crypt.sh
 sudo chmod u+x crypt.sh
-sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.sh ~/Abhay/decrypt.sh
+sudo cp -f /home/Abhay/cryptage/Crypt/src/crypt.sh /home/Abhay/decrypt.sh
 sudo chmod u+x decrypt.sh
 
 #copy the service to systemd
-sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.service /etc/systemd/system/crypt.service
-sudo cp -f ~/Abhay/cryptage/Crypt/src/decrypt.service /etc/systemd/system/decrypt.service
+sudo cp -f /home/Abhay/cryptage/Crypt/src/crypt.service /etc/systemd/system/crypt.service
+sudo cp -f /home/Abhay/cryptage/Crypt/src/decrypt.service /etc/systemd/system/decrypt.service
 
 #Launch service
 sudo systemctl daemon-reload

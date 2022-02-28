@@ -1,11 +1,10 @@
 [Unit]
-Description=Data decryption
-After=network-online.target
-
+Description=A
+After=network.target
 [Service]
 User=client
-WorkingDirectory=~/Abhay/cryptage/
-ExecStart=~/Abhay/cryptage/decrypt.sh start
+WorkingDirectory=/home/Abhay/cryptage/Crypt/src/
+ExecStart=/home/Abhay/cryptage/Crypt/src/decrypt.sh start
 
 [Install]
 WantedBy=multi-user.target
