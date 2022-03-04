@@ -19,7 +19,7 @@ cd ~/Abhay/cryptage/Crypt/src/
 #To give permission and launch the cryption and decryption
 sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.sh ~/Abhay/crypt.sh
 sudo chmod u+x crypt.sh
-sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.sh ~/Abhay/decrypt.sh
+sudo cp -f ~/Abhay/cryptage/Crypt/src/decrypt.sh ~/Abhay/decrypt.sh
 sudo chmod u+x decrypt.sh
 
 #copy the service to systemd
