@@ -2,7 +2,7 @@
 Description=Data encryption
 After=network-online.target
 [Service]
-WorkingDirectory=/bin/
+WorkingDirectory=/bin
 ExecStart=/bin/crypt.sh
 [Install]
 WantedBy=multi-user.target

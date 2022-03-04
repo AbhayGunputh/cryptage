@@ -2,7 +2,7 @@
 Description=Data decryption
 After=network-online.target
 [Service]
-WorkingDirectory=/bin/
+WorkingDirectory=/bin
 ExecStart=/bin/decrypt.sh
 [Install]
 WantedBy=multi-user.target
