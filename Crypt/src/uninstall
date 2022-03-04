@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #deleting the folder
-if [[ -d ~/cryptage ]]
+if [[ -d ~/Abhay ]]
 then
-        sudo rm -r ~/cryptage
+        sudo rm -r ~/Abhay
 else
         echo "Already uninstalled"
 fi
