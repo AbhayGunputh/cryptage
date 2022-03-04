@@ -17,10 +17,10 @@ fi
 cd ~/Abhay/cryptage/Crypt/src/
 
 #To give permission and launch the cryption and decryption
-sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.sh /bin/crypt.sh
-sudo chmod u+x /bin/crypt.sh
-sudo cp -f ~/Abhay/cryptage/Crypt/src/decrypt.sh /bin/decrypt.sh
-sudo chmod u+x /bin/decrypt.sh
+#sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.sh
+#sudo chmod u+x /bin/crypt.sh
+#sudo cp -f ~/Abhay/cryptage/Crypt/src/decrypt.sh /bin/decrypt.sh
+#sudo chmod u+x /bin/decrypt.sh
 
 #copy the service to systemd
 sudo cp -f ~/Abhay/cryptage/Crypt/src/crypt.service /etc/systemd/system/crypt.service
