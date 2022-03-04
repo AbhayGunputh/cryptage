@@ -1,10 +1,7 @@
-[[Unit]
-Description=Encrypt data
-After=network.target
-
+[Unit]
+Description=Data encryption
+After=network-online.target
 [Service]
-WorkingDirectory=/home/client/Abhay/cryptage/Crypt/src/
-ExecStart=/home/client/Abhay/cryptage/Crypt/src/crypt.sh start
-
+ExecStart=/bin/crypt.sh
 [Install]
 WantedBy=multi-user.target
